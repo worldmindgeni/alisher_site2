@@ -1,146 +1,95 @@
-body{
+body {
+  background-color: black;
+}
 
-    background-color: black;
+.header-container {
+  display: flex;
+  align-items: center; /* Aligns the logo and kin vertically */
+  justify-content: center; /* Centers the elements horizontally */
+  margin-top: 70px;
 }
-.logo{
-    z-index: 12;
-    position: absolute;
-    margin-top: 550px;
-    margin-left: 1500px;
+
+.logo {
+  margin-right: 20px; /* Space between logo and kin */
+  z-index: 12;
 }
-.kin img{
-    position: absolute;
-    z-index: 12;
-    width: 1000px;
-    height: 50px;
-    animation: moveUpDown 5s infinite;
+
+.kin img {
+  z-index: 12;
+  width: 1000px;
+  height: 50px;
+  animation: moveUpDown 5s infinite;
 }
+
 @keyframes moveUpDown {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px); /* Движение вверх на 20px */
-    }
-    100% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Движение вверх на 20px */
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
-.kin{
-    position: absolute;
-    margin-top: 70px;
-    margin-left:330px;
-}
-.foto img{
-    z-index: 8;
-    margin-left: 100px;
-    margin-top: 300px;
-position: absolute;
-width: 500px;
-height: 500px;
-}
-.woln img{
-    animation: moveUpDown 5s infinite;
-    z-index: 7;
-    position: absolute;
-    box-shadow:10px 10px 20px rgba(0, 0, 0, 5);
-    width: 100%;
-    
-}
-.waln img{
-    animation: moveUpDownu 7s infinite;
-    z-index: 10;
-    position: absolute;
-    width: 100%;
 
+.foto img {
+  z-index: 8;
+  margin-left: 100px;
+  margin-top: 300px;
+  position: absolute;
+  width: 500px;
+  height: 500px;
 }
+
+.woln img {
+  animation: moveUpDown 5s infinite;
+  z-index: 7;
+  position: absolute;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 5);
+  width: 100%;
+}
+
+.waln img {
+  animation: moveUpDownu 7s infinite;
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+}
+
 @keyframes moveUpDownu {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px); /* Движение вверх на 20px */
-    }
-    100% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Движение вверх на 20px */
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
- @media (max-width: 1550px) {
-    
- }
- @media (max-width: 320px) {
-    body{
 
-        background-color: black;
-    }
-    .logo{
-        z-index: 12;
-        position: absolute;
-        margin-top: 700px;
-        margin-left: 450px;
-    }
-    .kin img{
-     
-        position: absolute;
-        z-index: 12;
-        width: 380px;
-        height: 20px;
-        animation: moveUpDown 5s infinite;
-    }
-    @keyframes moveUpDown {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px); /* Движение вверх на 20px */
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-    .kin{
-        position: absolute;
-        margin-top: 70px;
-        margin-left:250px;
-    }
-    .foto img{
-        z-index: 8;
-        margin-left: 250px;
-        margin-top: 150px;
-    position: absolute;
+/* Responsive adjustments */
+@media (max-width: 320px) {
+  .header-container {
+    flex-direction: column; /* Stacks logo and kin vertically on small screens */
+    margin-top: 20px;
+  }
+
+  .kin img {
+    width: 380px;
+    height: 20px;
+  }
+
+  .foto img {
+    margin-left: 250px;
+    margin-top: 150px;
     width: 500px;
     height: 500px;
-    }
-    .woln img{
-        animation: moveUpDown 5s infinite;
-        z-index: 7;
-        position: absolute;
-        box-shadow:10px 10px 20px rgba(0, 0, 0, 5);
-        width: 100%;
-        
-    }
-    .woln img{
-        width: 1000px;
-    }
-    .waln img{
-        animation: moveUpDownu 7s infinite;
-        z-index: 10;
-        position: absolute;
-        width: 100%;
-    
-    }
-    .waln img{
-        width: 1000px;
-    }
-    @keyframes moveUpDownu {
-        0% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-20px); /* Движение вверх на 20px */
-        }
-        100% {
-            transform: translateY(0);
-        }
-    }
- }
+  }
+
+  .woln img,
+  .waln img {
+    width: 1000px;
+  }
+}
